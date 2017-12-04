@@ -2,6 +2,7 @@
 package org.usfirst.frc.team2335.robot;
 
 
+import org.usfirst.frc.team2335.robot.commands.AutoDrive;
 import org.usfirst.frc.team2335.robot.subsystems.Climb;
 import org.usfirst.frc.team2335.robot.subsystems.DriveTrain;
 
@@ -42,7 +43,10 @@ public class Robot extends IterativeRobot
 		driveTrain = new DriveTrain();
 		climb = new Climb();
 		oi = new OI(); // MAKE THIS ALWAYS BE DEFINED LAST
-		//chooser.addDefault("Default Auto", new ExampleCommand());
+		
+		
+		
+		chooser.addDefault("Default Auto", new AutoDrive());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}

@@ -17,7 +17,7 @@ public class OI
 	public OI()
 	{
 		joystick = new Joystick(Robot.JOYSTICK);
-		climbButton = new JoystickButton(Robot.CLIMB);
+		climbButton = new JoystickButton(joystick, Robot.CLIMB);
 	}
 	
 	public double getAxis(int axis)
